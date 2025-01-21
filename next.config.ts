@@ -2,7 +2,7 @@ import type {NextConfig} from "next";
 import createMdx from '@next/mdx';
 
 const nextConfig: NextConfig = {
-    pageExtensions: ['mdx', 'ts', 'tsx'],
+    pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
     experimental: {
         mdxRs: true,
     }

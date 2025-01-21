@@ -14,11 +14,14 @@
     "@next/mdx": "^15.1.5",
     "@types/mdx": "^2.0.13",
     "next": "15.1.5",
+    "next-view-transitions": "^0.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sugar-high": "^0.8.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
