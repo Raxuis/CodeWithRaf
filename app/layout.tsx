@@ -34,7 +34,13 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}
             >
-            <SidebarProvider>
+            <SidebarProvider
+                style={
+                    {
+                        "--sidebar-width": "19rem",
+                    } as React.CSSProperties
+                }
+            >
                 <AppSidebar/>
                 <Layout>
                     <BlurHeader/>
