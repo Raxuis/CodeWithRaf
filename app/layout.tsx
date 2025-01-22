@@ -5,7 +5,7 @@ import "./globals.css";
 import {ReactNode} from "react";
 import {BlurHeader} from "@/components/Header";
 import Layout from "@/Layout";
-import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {SidebarProvider} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/app-sidebar";
 
 const inter = Inter({
