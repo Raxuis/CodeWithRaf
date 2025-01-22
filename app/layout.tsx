@@ -5,6 +5,8 @@ import "./globals.css";
 import {ReactNode} from "react";
 import {BlurHeader} from "@/components/Header";
 import Layout from "@/Layout";
+import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import {AppSidebar} from "@/components/app-sidebar";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -32,12 +34,15 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}
             >
-            <Layout>
-                <BlurHeader/>
-                <div className="pt-14">
-                    {children}
-                </div>
-            </Layout>
+            <SidebarProvider>
+                <AppSidebar/>
+                <Layout>
+                    <BlurHeader/>
+                    <main className="pt-14">
+                        {children}
+                    </main>
+                </Layout>
+            </SidebarProvider>
             </body>
             </html>
         </ViewTransitions>
