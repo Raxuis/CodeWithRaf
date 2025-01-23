@@ -2,9 +2,11 @@ import type {Metadata} from "next";
 import {Inter, JetBrains_Mono} from "next/font/google";
 import {cn} from "@/lib/utils";
 import "./globals.css";
-import {ReactNode} from "react";
+import {CSSProperties, ReactNode} from "react";
 import {ViewTransitions} from "next-view-transitions";
 import {BlurHeader} from "@/components/Header";
+import {AppSidebar} from "@/components/app-sidebar";
+import {SidebarProvider} from "@/components/ui/sidebar";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -32,12 +34,21 @@ export default function RootLayout({
             <body
                 className={cn('min-h-screen bg-background font-sans antialiased', inter.variable, jetbrainsMono.variable)}
             >
-            <div className="relative flex flex-col min-h-dvh bg-background">
-                <BlurHeader/>
-                <main className="flex-1 mt-10">
-                    {children}
-                </main>
-            </div>
+            <SidebarProvider
+                style={
+                    {
+                        "--sidebar-width": "19rem",
+                    } as CSSProperties
+                }
+            >
+                <AppSidebar/>
+                <div className="relative flex flex-col min-h-dvh bg-background items-center justify-center w-full">
+                    <BlurHeader/>
+                    <main className="flex-1 pt-14">
+                        {children}
+                    </main>
+                </div>
+            </SidebarProvider>
             </body>
             </html>
         </ViewTransitions>
