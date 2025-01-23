@@ -1,6 +1,8 @@
 import type {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 
+import tailwindcss_animate from "tailwindcss-animate";
+
 export default {
     darkMode: ["class"],
     content: [
@@ -63,5 +65,5 @@ export default {
             }
         }
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [tailwindcss_animate],
 } satisfies Config;
