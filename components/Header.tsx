@@ -20,11 +20,13 @@ export function BlurHeader() {
             <div
                 className="pointer-events-none absolute inset-0  z-[7] h-[20vh] backdrop-blur-[4px] [mask-image:linear-gradient(0deg,transparent_75%,#000_87.5%,#000_100%,transparent_112.5%)]"></div>
             <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
-                <Link className="z-[10] flex items-center gap-4" href="/">
+                <div className="flex gap-4 items-center">
                     <SidebarTrigger className="z-[10] size-10"/>
-                    <Image src="/static/icon.png" alt="Raxuis Icon" width={50} height={50} className="size-10"/>
-                    Code With Raf
-                </Link>
+                    <Link className="z-[10] flex items-center gap-4" href="/">
+                        <Image src="/static/icon.png" alt="Raxuis Icon" width={50} height={50} className="size-10"/>
+                        Code With Raf
+                    </Link>
+                </div>
                 <div className="z-[10]">
                     <Link href="/about" className="">
                         About
