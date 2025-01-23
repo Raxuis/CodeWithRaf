@@ -1,22 +1,18 @@
 import type {Metadata} from "next";
 import {Inter, JetBrains_Mono} from "next/font/google";
-import {ViewTransitions} from 'next-view-transitions'
+import {cn} from "@/lib/utils";
 import "./globals.css";
 import {ReactNode} from "react";
-import {BlurHeader} from "@/components/Header";
-import Layout from "@/Layout";
-import {SidebarProvider} from "@/components/ui/sidebar";
-import {AppSidebar} from "@/components/app-sidebar";
 
 const inter = Inter({
     variable: "--font-inter",
     subsets: ["latin"],
 });
 
-const jetBrainsMono = JetBrains_Mono({
+const jetbrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains-mono",
     subsets: ["latin"],
-})
+});
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -29,28 +25,12 @@ export default function RootLayout({
     children: ReactNode;
 }>) {
     return (
-        <ViewTransitions>
-            <html lang="en">
-            <body
-                className={`${inter.variable} ${jetBrainsMono.variable} antialiased`}
-            >
-            <SidebarProvider
-                style={
-                    {
-                        "--sidebar-width": "19rem",
-                    } as React.CSSProperties
-                }
-            >
-                <AppSidebar/>
-                <Layout>
-                    <BlurHeader/>
-                    <main className="pt-14">
-                        {children}
-                    </main>
-                </Layout>
-            </SidebarProvider>
-            </body>
-            </html>
-        </ViewTransitions>
+        <html lang="en">
+        <body
+            className={cn('min-h-screen bg-background font-sans antialiased', inter.variable, jetbrainsMono.variable)}
+        >
+        {children}
+        </body>
+        </html>
     );
 }
