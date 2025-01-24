@@ -7,6 +7,7 @@ import {ViewTransitions} from "next-view-transitions";
 import {BlurHeader} from "@/components/Header";
 import {AppSidebar} from "@/components/app-sidebar";
 import {SidebarProvider} from "@/components/ui/sidebar";
+import Layout from "@/Layout";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -37,12 +38,12 @@ export default function RootLayout({
             <SidebarProvider
             >
                 <AppSidebar/>
-                <div className="relative flex flex-col min-h-dvh bg-background items-center justify-center w-full">
+                <Layout>
                     <BlurHeader/>
-                    <main className="flex-1 pt-14">
+                    <main className="pt-14">
                         {children}
                     </main>
-                </div>
+                </Layout>
             </SidebarProvider>
             </body>
             </html>
