@@ -1,7 +1,6 @@
 "use client"
 
 import {ChevronRight, type LucideIcon} from "lucide-react"
-
 import {
     Collapsible,
     CollapsibleContent,
@@ -18,10 +17,9 @@ import {
     SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 import {IconType} from "react-icons";
-
 export function NavLanguages({
-                            items,
-                        }: {
+                                 items,
+                             }: {
     items: {
         title: string
         url: string

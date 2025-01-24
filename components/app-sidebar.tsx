@@ -6,11 +6,8 @@ import {
     Home,
     Navigation,
 } from "lucide-react"
-
 import {FaReact} from "react-icons/fa6";
 import {FaVuejs} from "react-icons/fa";
-
-
 import {NavLanguages} from "@/components/nav-languages"
 
 import {
@@ -21,8 +18,6 @@ import {
 import {NavWebsite} from "@/components/nav-website";
 import {RiNextjsFill} from "react-icons/ri";
 
-
-// This is sample data.
 const data = {
     navLanguages: [
         {
