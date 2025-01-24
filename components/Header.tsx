@@ -27,8 +27,7 @@ export function BlurHeader() {
                         Code With Raf
                     </Link>
                 </div>
-                <div className="flex items-center gap-2">
-
+                <div className="flex items-center gap-4">
                     <div className="z-10">
                         <Link href="/about">
                             About
