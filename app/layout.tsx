@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import {Inter, JetBrains_Mono} from "next/font/google";
 import {cn} from "@/lib/utils";
 import "./globals.css";
-import {CSSProperties, ReactNode} from "react";
+import {ReactNode} from "react";
 import {ViewTransitions} from "next-view-transitions";
 import {BlurHeader} from "@/components/Header";
 import {AppSidebar} from "@/components/app-sidebar";
