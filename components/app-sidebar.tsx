@@ -79,7 +79,7 @@ const data = {
 
 export function AppSidebar({...props}: React.ComponentProps<typeof Sidebar>) {
     return (
-        <Sidebar variant="floating" collapsible="icon" {...props}>
+        <Sidebar collapsible="icon" {...props}>
             <SidebarContent>
                 <NavLanguages items={data.navLanguages}/>
                 <NavWebsite items={data.navigation}/>
