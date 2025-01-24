@@ -2,6 +2,7 @@ import {Link} from "next-view-transitions";
 import {Calendar, SquareArrowOutUpRight} from "lucide-react";
 import {buttonVariants} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
+import {formatDate} from "@/lib/utils";
 
 interface PostItemProps {
     slug: string;
@@ -34,7 +35,7 @@ export function PostItem({slug, title, description, date, tags}: PostItemProps) 
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
                         <Calendar className="size-4"/>
-                        <time dateTime={date}>{new Date(date).toLocaleDateString()}</time>
+                        <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
                 </dl>
             </div>
