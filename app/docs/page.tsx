@@ -1,9 +1,15 @@
 import React from 'react';
 import {posts} from '#site/content'
 import {PostItem} from "@/components/post-item";
+import {sortPosts} from "@/lib/utils";
 
 export default async function Documentation() {
-    const displayPosts = posts;
+    const sortedPosts = sortPosts(
+        posts.filter((post) => post.published
+        ));
+
+    const displayPosts = sortedPosts;
+
     return (
         <div className="container">
             <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
@@ -35,7 +41,7 @@ export default async function Documentation() {
                             })}
                         </ul>
                     ) : (
-                        <p>Nothing to see here yet</p>
+                        <p className="py-6">Nothing to see here yet</p>
                     )}
                 </div>
             </div>
