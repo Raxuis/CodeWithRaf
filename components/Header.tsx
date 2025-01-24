@@ -27,10 +27,18 @@ export function BlurHeader() {
                         Code With Raf
                     </Link>
                 </div>
-                <div className="z-10">
-                    <Link href="/about" className="">
-                        About
-                    </Link>
+                <div className="flex items-center gap-2">
+
+                    <div className="z-10">
+                        <Link href="/about">
+                            About
+                        </Link>
+                    </div>
+                    <div className="z-10">
+                        <Link href="/docs">
+                            Documentations
+                        </Link>
+                    </div>
                 </div>
             </div>
         </header>
