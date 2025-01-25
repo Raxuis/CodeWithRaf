@@ -1,7 +1,6 @@
 "use client";
 
 import {usePathname, useSearchParams} from "next/navigation";
-import {cn} from "@/lib/utils";
 import {
     Pagination,
     PaginationContent,
