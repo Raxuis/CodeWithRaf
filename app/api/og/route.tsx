@@ -1,6 +1,5 @@
 import {NextRequest} from "next/server";
 import {ImageResponse} from "next/og";
-import Image from "next/image";
 
 export const runtime = "edge";
 
@@ -29,7 +28,7 @@ export async function GET(req: NextRequest) {
         return new ImageResponse((
             <div tw="h-full w-full flex flex-col items-center justify-center bg-white text-[32px] font-semibold">
                 <img src={iconSrc} alt="code-with-raf-icon" width="75" height="75"/>
-                <div tw="mt-10">Code With Raf</div>
+                <div tw="mt-10">CodeWithRaf</div>
                 <div tw="text-slate-500 text-xl mt-3">{heading}</div>
             </div>
         ), {

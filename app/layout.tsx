@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
     title: "CodeWithRaf",
-    description: "Code with Raf is a blog where I share insights and experiences across different programming languages, exploring new technologies and coding tips.",
+    description: "CodeWithRaf is a blog where I share insights and experiences across different programming languages, exploring new technologies and coding tips.",
     metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteConfig.url),
 };
 

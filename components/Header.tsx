@@ -2,7 +2,6 @@ import {Link} from "next-view-transitions";
 import Image from "next/image";
 import {SidebarTrigger} from "@/components/ui/sidebar";
 import {cn} from "@/lib/utils";
-import {buttonVariants} from "@/components/ui/button";
 
 export function BlurHeader() {
     return (
@@ -25,11 +24,11 @@ export function BlurHeader() {
                 className="mx-auto flex w-full max-w-5xl items-center justify-between border-border border rounded-lg z-10 p-2">
                 <SidebarTrigger className="size-10 cursor-pointer ml-2"/>
                 <Link
-                    className={cn(buttonVariants({variant: "ghost", size: "lg"}), "flex items-center gap-4 py-8 px-4")}
+                    className={cn("flex items-center gap-4 p-8 h-11")}
                     href="/">
                     <Image src="/static/icon.png" alt="Raxuis Icon" width={50} height={50} className="size-10"/>
                     <h1 className="text-lg">
-                        Code With Raf
+                        CodeWithRaf
                     </h1>
                 </Link>
             </div>
