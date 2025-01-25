@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/sidebar"
 import {NavWebsite} from "@/components/nav-website";
 import {RiNextjsFill} from "react-icons/ri";
+import {RiTailwindCssFill} from "react-icons/ri";
 
 const data = {
     navLanguages: [
@@ -54,6 +55,17 @@ const data = {
                     url: "/docs/reactjs/installation",
                 },
             ],
+        },
+        {
+            title: "Tailwindcss",
+            url: "/docs/tailwindcss",
+            icon: RiTailwindCssFill,
+            items: [
+                {
+                    title: "Installation",
+                    url: "/docs/tailwindcss/installation",
+                },
+            ],
         }
     ],
     navigation: [
@@ -74,7 +86,7 @@ const data = {
                     icon: Fingerprint
                 },
                 {
-                    title: "Documentation",
+                    title: "Documentations",
                     url: "/docs",
                     icon: BookMarkedIcon
                 },

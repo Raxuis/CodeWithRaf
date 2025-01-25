@@ -1,0 +1,83 @@
+---
+title: TailwindCSS Installation
+description: Learn how to install and set up TailwindCSS in your project
+date: 2025-03-23
+tags: ["TailwindCSS", "installation", "setup"]
+language: "TailwindCSS"
+published: true
+---
+
+## TailwindCSS Installation
+This example is for Vite, but you can use the same steps for other bundlers.
+#### Prerequisites:
+- Node.js (LTS)
+- npm, yarn, or pnpm
+
+---
+## Version 3.0
+#### Steps:
+1. Install TailwindCSS:
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+   ```
+2. Configure in `tailwind.config.js`:
+```js showLineNumbers
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+   ```
+3. Add to CSS:
+```css showLineNumbers title="index.css"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+   ```
+4. Start your server.
+
+---
+## Version 4.0
+#### Steps:
+1. Install TailwindCSS:
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
+2. Configure in the `vite` plugin :
+```js showLineNumbers title="vite.config.ts"
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+```
+3. Add to CSS:
+```css showLineNumbers title="index.css"
+@import "tailwindcss";
+```
+
+4. Start using TailwindCSS.
+```html title="index.html"
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>
+```
+5. Start your server.
+```bash
+npm run dev
+```

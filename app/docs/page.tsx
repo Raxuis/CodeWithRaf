@@ -6,7 +6,7 @@ import {QueryPagination} from "@/components/query-pagination";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: "Documentation",
+    title: "Documentations",
     description: "Here you will can find every documentation you need."
 }
 
