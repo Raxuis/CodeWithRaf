@@ -1,4 +1,4 @@
-import type {Metadata} from "next";
+import type {Metadata, Viewport} from "next";
 import {Inter, JetBrains_Mono} from "next/font/google";
 import {cn} from "@/lib/utils";
 import "./globals.css";
@@ -8,6 +8,7 @@ import {BlurHeader} from "@/components/Header";
 import {AppSidebar} from "@/components/app-sidebar";
 import {SidebarProvider} from "@/components/ui/sidebar";
 import Layout from "@/Layout";
+import {siteConfig} from "@/config/site";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -22,7 +23,21 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
     title: "CodeWithRaf",
     description: "Code with Raf is a blog where I share insights and experiences across different programming languages, exploring new technologies and coding tips.",
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteConfig.url),
 };
+
+export const viewport: Viewport = {
+    themeColor: [
+        {
+            media: "(prefers-color-scheme: light)",
+            color: "white"
+        },
+        {
+            media: "(prefers-color-scheme: dark)",
+            color: "black"
+        }
+    ]
+}
 
 export default function RootLayout({
                                        children,
