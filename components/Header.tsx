@@ -1,6 +1,8 @@
 import {Link} from "next-view-transitions";
 import Image from "next/image";
 import {SidebarTrigger} from "@/components/ui/sidebar";
+import {cn} from "@/lib/utils";
+import {buttonVariants} from "@/components/ui/button";
 
 export function BlurHeader() {
     return (
@@ -19,11 +21,16 @@ export function BlurHeader() {
                 className="pointer-events-none absolute inset-0  z-6 h-[20vh] backdrop-blur-[2px] [mask-image:linear-gradient(0deg,transparent_62.5%,#000_75%,#000_87.5%,transparent_100%)]"></div>
             <div
                 className="pointer-events-none absolute inset-0  z-7 h-[20vh] backdrop-blur-[4px] [mask-image:linear-gradient(0deg,transparent_75%,#000_87.5%,#000_100%,transparent_112.5%)]"></div>
-            <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
-                <SidebarTrigger className="z-10 size-10"/>
-                <Link className="z-10 flex items-center gap-4" href="/">
+            <div
+                className="mx-auto flex w-full max-w-5xl items-center justify-between border-border border rounded-lg z-10 p-2">
+                <SidebarTrigger className="size-10 cursor-pointer ml-2"/>
+                <Link
+                    className={cn(buttonVariants({variant: "ghost", size: "lg"}), "flex items-center gap-4 py-8 px-4")}
+                    href="/">
                     <Image src="/static/icon.png" alt="Raxuis Icon" width={50} height={50} className="size-10"/>
-                    Code With Raf
+                    <h1 className="text-lg">
+                        Code With Raf
+                    </h1>
                 </Link>
             </div>
         </header>

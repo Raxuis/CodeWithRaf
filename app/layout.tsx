@@ -55,7 +55,7 @@ export default function RootLayout({
                 <AppSidebar/>
                 <Layout>
                     <BlurHeader/>
-                    <main className="pt-14">
+                    <main className="pt-14 px-5">
                         {children}
                     </main>
                 </Layout>
