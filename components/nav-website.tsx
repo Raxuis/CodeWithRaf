@@ -16,6 +16,7 @@ import {
     SidebarMenuSubButton,
     SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+import {Link} from "next-view-transitions";
 
 export function NavWebsite({
                                items,
@@ -28,7 +29,8 @@ export function NavWebsite({
         items?: {
             title: string
             url: string
-            icon: LucideIcon
+            icon: LucideIcon,
+            outsideLink?: boolean
         }[]
     }[]
 }) {
@@ -57,10 +59,18 @@ export function NavWebsite({
                                     {item.items?.map((subItem) => (
                                         <SidebarMenuSubItem key={subItem.title}>
                                             <SidebarMenuSubButton asChild>
-                                                <a href={subItem.url}>
-                                                    {subItem.icon && <subItem.icon/>}
-                                                    <span>{subItem.title}</span>
-                                                </a>
+                                                {
+                                                    subItem.outsideLink ? (
+                                                        <a href={subItem.url} target="_blank">
+                                                            {subItem.icon && <subItem.icon/>}
+                                                            <span>{subItem.title}</span>
+                                                        </a>) : (
+                                                        <Link href={subItem.url}>
+                                                            {subItem.icon && <subItem.icon/>}
+                                                            <span>{subItem.title}</span>
+                                                        </Link>
+                                                    )
+                                                }
                                             </SidebarMenuSubButton>
                                         </SidebarMenuSubItem>
                                     ))}

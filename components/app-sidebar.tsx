@@ -2,9 +2,10 @@
 
 import * as React from "react"
 import {
+    BookMarkedIcon,
     Fingerprint,
     Home,
-    Navigation,
+    Navigation, PenLineIcon,
 } from "lucide-react"
 import {FaReact} from "react-icons/fa6";
 import {FaVuejs} from "react-icons/fa";
@@ -72,6 +73,17 @@ const data = {
                     url: "/about",
                     icon: Fingerprint
                 },
+                {
+                    title: "Documentation",
+                    url: "/docs",
+                    icon: BookMarkedIcon
+                },
+                {
+                    title: "Contributing",
+                    url: "https://github.com/Raxuis/code-with-raf",
+                    outsideLink: true,
+                    icon: PenLineIcon
+                }
             ],
         },
     ],
