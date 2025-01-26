@@ -7,7 +7,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { BlurHeader } from "@/components/Header";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import Layout from "@/Layout";
+import { Layout } from "@/Layout";
 import { siteConfig } from "@/config/site";
 
 const inter = Inter({

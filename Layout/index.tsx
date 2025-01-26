@@ -1,10 +1,5 @@
-import React, { ReactNode } from "react";
+import { twx } from "@/lib/utils";
 
-const Layout = ({ children }: { children: ReactNode }) => {
-  return (
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-4 overflow-y-auto px-4">
-      {children}
-    </div>
-  );
-};
-export default Layout;
+export const Layout = twx.div(() => [
+  `max-w-5xl w-full flex-col py-6 flex gap-4 mx-auto px-4`,
+]);
