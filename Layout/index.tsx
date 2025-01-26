@@ -1,10 +1,10 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from "react";
 
-const Layout = ({children}: { children: ReactNode }) => {
-    return (
-        <div className="relative overflow-y-auto max-w-5xl w-full flex-col flex gap-4 mx-auto px-4">
-            {children}
-        </div>
-    );
+const Layout = ({ children }: { children: ReactNode }) => {
+  return (
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-4 overflow-y-auto px-4">
+      {children}
+    </div>
+  );
 };
 export default Layout;
