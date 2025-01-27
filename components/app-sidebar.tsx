@@ -40,6 +40,10 @@ const data = {
           title: "Installation",
           url: "/docs/reactjs/installation",
         },
+        {
+          title: "Pass Props",
+          url: "/docs/reactjs/pass-props",
+        },
       ],
     },
     {

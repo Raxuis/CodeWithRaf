@@ -1,0 +1,88 @@
+---
+title: Pass Props in React.js
+description: Learn how to pass props in React.js
+date: 2025-01-27
+tags: ["React.js", "props"]
+language: "React.js"
+published: true
+---
+
+# Pass Props in React.js
+
+In React, there are **two primary ways to pass props** to components:
+## 1. **Pass Props Directly**
+Props can be passed directly as attributes when rendering a component. This method is commonly used for simple data.
+
+<LanguagesTabs
+  tabs={[
+    {
+      language: "javascript",
+      code: `function WelcomeMessage({ name }) {
+      return <h1>Hello, {name}!</h1>;
+}
+
+export default function App() {
+      return <WelcomeMessage name="Raf" />;
+}`,
+    },
+    {
+      language: "typescript",
+      code: `type WelcomeMessageProps = {
+      name: string;
+};
+
+function WelcomeMessage({ name }: WelcomeMessageProps) {
+      return <h1>Hello, {name}!</h1>;
+}
+
+export default function App() {
+      return <WelcomeMessage name="Raf" />;
+}`,
+    },
+  ]}
+/>
+
+## 2. **Pass Props via `children`**
+Instead of using attributes, components can also receive data as `children`. This is useful for passing JSX or other components.
+
+<LanguagesTabs
+  tabs={[
+    {
+      language: "javascript",
+      code: `function WelcomeMessage({ children }) {
+      return <h1>{children}</h1>;
+}
+
+export default function App() {
+      return (
+        <WelcomeMessage>
+          Hello, <strong>Raf</strong>!
+        </WelcomeMessage>
+      );
+}`,
+    },
+    {
+      language: "typescript",
+      code: `type WelcomeMessageProps = {
+      children: React.ReactNode;
+};
+
+function WelcomeMessage({ children }: WelcomeMessageProps) {
+      return <h1>{children}</h1>;
+}
+
+export default function App() {
+      return (
+        <WelcomeMessage>
+          Hello, <strong>Raf</strong>!
+        </WelcomeMessage>
+      );
+}`,
+    },
+  ]}
+/>
+---
+
+The **difference in TypeScript** lies in specifying prop types using `interface` or `type`. While JavaScript doesn't enforce types, TypeScript ensures type safety.
+
+Both approaches can be combined for more flexible and reusable components. For instance, you might pass some data as props and also include `children`.
